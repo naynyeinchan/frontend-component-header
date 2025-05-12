@@ -18,17 +18,9 @@ const AuthenticatedUserDropdown = ({ intl, username }) => {
       href: `${getConfig().LMS_BASE_URL}/dashboard`,
     },
     {
-      message: intl.formatMessage(messages.profile),
-      href: `${getConfig().ACCOUNT_PROFILE_URL}/u/${username}`,
-    },
-    {
       message: intl.formatMessage(messages.account),
       href: getConfig().ACCOUNT_SETTINGS_URL,
     },
-    ...(getConfig().ORDER_HISTORY_URL ? [{
-      message: intl.formatMessage(messages.orderHistory),
-      href: getConfig().ORDER_HISTORY_URL,
-    }] : []),
     {
       message: intl.formatMessage(messages.signOut),
       href: getConfig().LOGOUT_URL,
